@@ -1,0 +1,31 @@
+{
+  "name": "111ty",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist",
+    "watch-css": "npx tailwindcss -i ./src/css/style.css -o ./dist/css/style.css -w",
+    "build-css": "cross-env NODE_ENV=production npx tailwindcss -i ./src/css/style.css -o ./dist/css/style.css --minify",
+    "start": "concurrently \"npm:watch-*\" \"cross-env NODE_ENV=development npx @11ty/eleventy --serve\"",
+    "build": "concurrently \"npm run clean\" \"cross-env NODE_ENV=production npx @11ty/eleventy\"  \"npm:build-*\"",
+    "debug": "cross-env DEBUG=Eleventy* npm run build"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy-navigation": "^0.1.6",
+    "@tailwindcss/forms": "^0.3.3",
+    "@tailwindcss/typography": "^0.4.1",
+    "cross-env": "^7.0.3",
+    "eleventy-njk-unpkg-inliner": "^1.0.2",
+    "eleventy-plugin-seo": "^0.5.1",
+    "eleventy-plugin-tailwindcss": "^0.3.0",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.13"
+  }
+}

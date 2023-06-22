@@ -1,0 +1,43 @@
+<div class="container mx-auto relative">
+  <div class="swiper-container py-20 overflow-hidden">
+    <div class="swiper-wrapper">
+      <!-- Imagen repetida 5 veces -->
+      <div class="swiper-slide flex justify-center">
+        <img src="../../../assets/img/galeria-tropezon-1.jpg" alt="Imagen 1" />
+      </div>
+      <div class="swiper-slide flex justify-center">
+        <img src="../../../assets/img/galeria-tropezon-1.jpg" alt="Imagen 2" />
+      </div>
+      <div class="swiper-slide flex justify-center">
+        <img src="../../../assets/img/galeria-tropezon-1.jpg" alt="Imagen 3" />
+      </div>
+      <div class="swiper-slide flex justify-center">
+        <img src="../../../assets/img/galeria-tropezon-1.jpg" alt="Imagen 4" />
+      </div>
+      <div class="swiper-slide flex justify-center">
+        <img src="../../../assets/img/galeria-tropezon-1.jpg" alt="Imagen 5" />
+      </div>
+      <div class="swiper-slide flex justify-center">
+        <img src="../../../assets/img/galeria-tropezon-1.jpg" alt="Imagen 6" />
+      </div>
+    </div>
+    <!-- Agrega los botones de navegación -->
+    <div class="swiper-button-next absolute -right-5"></div>
+    <div class="swiper-button-prev absolute -left-5"></div>
+  </div>
+</div>
+<!-- Enlace al archivo JavaScript de Swiper -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  // Inicializa el Swiper
+  var swiper = new Swiper(".swiper-container", {
+    slidesPerView: 1, // Mostrar 3 imágenes a la vez
+    loop: true,
+    grabcursor: true,
+    spaceBetween: 0, // Espacio entre diapositivas en píxeles (ajusta el valor según tu necesidad)
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>

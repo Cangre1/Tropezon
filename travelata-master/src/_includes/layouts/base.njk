@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% seo '' %}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+      href="//cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.0/css/pikaday.min.css"
+    />
+    <link
+      media="screen"
+      rel="stylesheet"
+      href="//unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    {% if ignore %}
+    <meta name="robots" content="noindex" />
+    {% endif %}
+    <!-- add these code in the head section -->
+    <script
+      async
+      src="//www.googletagmanager.com/gtag/js?id={{ site.tracking.gtag }}"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "{{ site.tracking.gtag }}");
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    {% include "components/nav.njk" %}
+    <div class="site-wrapper">
+      <div class="site-content">
+        {{ content | safe }}
+      </div>
+      {% include "components/footer.njk" %}
+    </div>
+    <script defer src="//code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script
+      defer
+      src="//cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+    ></script>
+    <script
+      defer
+      src="//cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.0/pikaday.min.js"
+    ></script>
+    <script defer src="//unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script
+      defer
+      src="//unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script defer src="//unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="//unpkg.com/instafeed.js@2.0.0/dist/instafeed.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    {% if '/destinations' in page.url or '/contact-us' in page.url or
+    '/single-tour' in page.url %}
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key={{
+        site.tracking.gmaps_key
+      }}&callback=initGoogleMaps"
+    ></script>
+    {% endif %}
+    <script defer>
+      const feed = new Instafeed({
+          accessToken: '{{ site.instagram.accessToken }}',
+          limit: {{ site.instagram.limit }},
+      });
+      feed.run();
+    </script>
+  </body>
+</html>

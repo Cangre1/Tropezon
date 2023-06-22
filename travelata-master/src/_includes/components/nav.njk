@@ -1,0 +1,148 @@
+<div data-x-data="{ showTopNavToolbar: true }" class="">
+  <nav
+    class="bg-blueTropezon navbar fixed w-full z-50 transition duration-500 delay-200 h-[5.5rem] 4xl:h-[6.875rem] shadow-2xl"
+  >
+    <div
+      class="flex items-center justify-between flex-wrap bg-blueTropezon h-full px-5"
+    >
+      <div
+        class="flex items-center justify-between flex-row md:flex-row xl:bg-transparent w-full"
+      >
+        <button
+          class="text-orangeTropezon hover:text-white transition ease-in-out duration-300 w-1/3 flex justify-start md:justify-start items-center"
+          id="menu-hambur"
+        >
+          <img
+            src="../../assets/img/menu-hamburguesa.svg"
+            alt=""
+            class="w-[2rem]"
+            data-icon="system-uicons:menu-hamburger"
+            data-inline="false"
+          />
+        </button>
+        <a
+          href="/"
+          class="w-1/3 flex justify-end md:justify-center items-center"
+        >
+          <img
+            src="../../assets/img/el_tropezon_logo_color.svg"
+            class="w-24 md:w-28"
+            alt=""
+          />
+        </a>
+
+        <a
+          href="#formulario-desk"
+          class="text-orangeTropezon w-1/3 justify-end items-center hover:text-white b transition ease-in-out duration-300 font-hoeflerText space-x-1 hidden md:flex"
+        >
+          <span>Coordiná</span><span>tu</span><span>visita</span>
+        </a>
+      </div>
+
+      {% set navPages = collections.all | eleventyNavigation %}
+
+      <div
+        id="menu-mobile"
+        class="absolute top-0 z-50 left-0 -translate-x-full h-screen md:border-r border-orangeTropezon bg-blueTropezon w-full md:w-[20rem] transition-all ease-in-out duration-700 pt-[1.9rem]"
+      >
+        <div
+          class="px-5 py-[1.15rem] flex justify-between items-center border-b border-blueTropezon"
+        >
+          <span id="menu-close">
+            <img
+              src="../../assets/img/close1.svg"
+              alt=""
+              class="w-5 cursor-pointer"
+            />
+          </span>
+        </div>
+
+        <div class="bg-blueTropezon h-full" style="position: relative">
+          <div
+            class="px-5 py-10 flex flex-col h-full text-white"
+            style="position: relative"
+          >
+            <ul
+              class="flex flex-col gap-y-10 text-xl h-full text-orangeTropezon font-hoeflerText tracking-widest"
+              style="position: relative"
+            >
+              <li>
+                <a
+                  href="/"
+                  class="border-b border-b-transparent hover:border-blueTropezon transition-all ease-in-out duration-300 hover:text-white"
+                >
+                  Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/tropezon/"
+                  class="border-b border-b-transparent hover:border-blueTropezon transition-all ease-in-out duration-300 hover:text-white"
+                >
+                  El Tropezón de Areco</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/areco/"
+                  class="border-b border-b-transparent hover:border-blueTropezon transition-all ease-in-out duration-300 hover:text-white"
+                  >San Antonio de Areco</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/quienes-somos/"
+                  class="border-b border-b-transparent hover:border-blueTropezon transition-all ease-in-out duration-300 hover:text-white"
+                  >Quiénes somos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#formulario-desk"
+                  class="hidden md:block border-b border-b-transparent hover:border-blueTropezon transition-all ease-in-out duration-300 hover:text-white"
+                  >Contacto</a
+                >
+                <a
+                  href="#formulario-mob"
+                  class="mobile block md:hidden border-b border-b-transparent hover:border-blueTropezon transition-all ease-in-out duration-300 hover:text-white"
+                  >Contacto</a
+                >
+              </li>
+
+              <li
+                class="flex justify-between absolute bottom-32 md:bottom-10 w-full"
+              >
+                <div class="flex gap-x-5">
+                  <a href="#formulario-desk" class="hidden md:block"
+                    ><img
+                      src="../../assets/img/email-mob.svg"
+                      alt=""
+                      class="h-6 w-6"
+                  /></a>
+                  <a href="#formulario-mob" class="block md:hidden"
+                    ><img
+                      src="../../assets/img/email-mob.svg"
+                      alt=""
+                      class="h-6 w-6" /></a
+                  ><a
+                    href="https://www.instagram.com/eltropezondeareco/"
+                    target="_blank"
+                    ><img
+                      src="../../assets/img/instagram1.svg"
+                      alt=""
+                      class="h-6 w-6" /></a
+                  ><a
+                    href="https://www.facebook.com/eltropezondeareco/?locale=es_LA"
+                    target="_blank"
+                    ><img src="../../assets/img/fb1.svg" alt="" class="h-6 w-6"
+                  /></a>
+                </div>
+              </li>
+            </ul>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
