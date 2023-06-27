@@ -1,0 +1,206 @@
+<section class="bg-blueTropezon relative">
+  <img
+    class="absolute top-0 w-full h-full object-cover"
+    src="../../assets/img/trama.png"
+    alt=""
+  />
+  <div class="relative container">
+    <div
+      class="flex flex-col lg:flex-row items-start lg:items-center py-20 lg:pt-0 lg:pb-20"
+    >
+      <div class="mb-10">
+        <h2 class="titular-principal text-white">
+          SCHEDULE<br class="" />
+          YOUR VISIT.
+        </h2>
+        <p
+          class="titular-secundario text-orangeTropezon mt-10 leading-3 md:leading-6 uppercase"
+        >
+          LEAVE US YOUR CONTACT INFORMATION <br class="hidden md:block" />
+          AND WE WILL GET BACK TO YOU <br class="hidden md:block" />
+          AS SOON AS POSSIBLE.
+        </p>
+      </div>
+
+      <!--FORMULARIO DESK-->
+      <div
+        id="formulario-desk"
+        class="hidden ml-auto lg:flex flex-col justify-center items-center pt-72"
+      >
+        <form
+          id="contact-form"
+          method="post"
+          action="https://formspree.io/f/mqknnodn"
+          class="flex flex-col gap-y-5 w-[30rem]"
+        >
+          <div class="md:grid grid-cols-2 md:space-x-4 my-4 gap-x-5">
+            <div class="my-4 md:my-0 relative">
+              <input
+                name="firstName"
+                id="firstName"
+                class="input-formulario"
+                type="text"
+                placeholder="NAME"
+              />
+              <div
+                class="w-full h-5 border-b border-l border-r border-white absolute bottom-0 border-opacity-30"
+              ></div>
+            </div>
+            <div class="relative">
+              <input
+                name="lastName"
+                id="lastName"
+                class="input-formulario"
+                type="text"
+                placeholder="LAST NAME"
+              />
+              <div
+                class="w-full h-5 border-b border-l border-r border-white absolute bottom-0 border-opacity-30"
+              ></div>
+            </div>
+          </div>
+          <div class="md:grid grid-cols-2 md:space-x-4 my-4 gap-x-5">
+            <div class="my-4 md:my-0 relative">
+              <input
+                name="email"
+                id="email"
+                class="input-formulario"
+                type="text"
+                placeholder="EMAIL"
+              />
+              <div
+                class="w-full h-5 border-b border-l border-r border-white absolute bottom-0 border-opacity-30"
+              ></div>
+            </div>
+            <div class="relative">
+              <input
+                name="Telefono"
+                id="Telefono"
+                class="input-formulario"
+                type="number"
+                placeholder="PHONE"
+              />
+              <div
+                class="w-full h-5 border-b border-l border-r border-white absolute bottom-0 border-opacity-30"
+              ></div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <textarea
+              name="message"
+              id="message"
+              placeholder="MESSAGE"
+              class="h-[2.575rem] input-formulario"
+            ></textarea>
+            <div
+              class="w-full h-5 border-b border-l border-r border-white absolute bottom-1 border-opacity-30"
+            ></div>
+          </div>
+          <div class="mb-4" id="contact-form-status"></div>
+        </form>
+        <div
+          class="px-4 border-b border-white text-[1.381rem] font-hoeflerText hover:border-orangeTropezon transition ease-in-out duration-300 border-opacity-30"
+        >
+          <a
+            href=""
+            class="uppercase text-white hover:text-orangeTropezon transition ease-in-out duration-300 tracking-[0.2em] font-hoeflerText text-[1.104rem]"
+            >Send</a
+          >
+        </div>
+      </div>
+      <!--FORMULARIO DESK-->
+
+      <!--FORMULARIO MOB-->
+      <div
+        id="formulario-mob"
+        class="mx-auto flex flex-col justify-center items-center lg:hidden w-full"
+      >
+        <form
+          id="contact-form"
+          method="post"
+          action="https://formspree.io/f/mqknnodn"
+          class="flex flex-col gap-y-5 w-full"
+        >
+          <div class="grid grid-cols-1 my-4 gap-y-5">
+            <div class="relative">
+              <input
+                name="firstName"
+                id="firstName"
+                class="input-formulario"
+                type="text"
+                placeholder="NAME"
+              />
+              <div
+                class="w-full h-5 border-b border-l border-r border-white absolute bottom-0 border-opacity-30"
+              ></div>
+            </div>
+
+            <div class="relative">
+              <input
+                name="lastName"
+                id="lastName"
+                class="input-formulario"
+                type="text"
+                placeholder="LAST NAME"
+              />
+              <div
+                class="w-full h-5 border-b border-l border-r border-white absolute bottom-0 border-opacity-30"
+              ></div>
+            </div>
+
+            <div class="relative">
+              <input
+                name="email"
+                id="email"
+                class="input-formulario"
+                type="text"
+                placeholder="EMAIL"
+              />
+              <div
+                class="w-full h-5 border-b border-l border-r border-white absolute bottom-0 border-opacity-30"
+              ></div>
+            </div>
+
+            <div class="relative">
+              <input
+                name="Telefono"
+                id="Telefono"
+                class="input-formulario"
+                type="number"
+                placeholder="PHONE"
+              />
+              <div
+                class="w-full h-5 border-b border-l border-r border-white absolute bottom-0 border-opacity-30"
+              ></div>
+            </div>
+
+            <div class="relative">
+              <textarea
+                name="message"
+                id="message"
+                placeholder="MESSAGE"
+                class="h-[2.575rem] input-formulario"
+              ></textarea>
+              <div
+                class="w-full h-5 border-b border-l border-r border-white absolute bottom-1 border-opacity-30"
+              ></div>
+            </div>
+
+            <div class="mb-4" id="contact-form-status"></div>
+          </div>
+        </form>
+        <div
+          class="px-4 border-b border-white text-[1.381rem] font-hoeflerText hover:border-orangeTropezon transition ease-in-out duration-300 border-opacity-30 text-white hover:text-orangeTropezon"
+        >
+          <a
+            href=""
+            class="uppercase tracking-[0.2em] font-hoeflerText text-[1.104rem]"
+            >Send</a
+          >
+        </div>
+      </div>
+      <!--FORMULARIO MOB-->
+    </div>
+  </div>
+</section>
