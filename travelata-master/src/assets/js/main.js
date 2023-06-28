@@ -37,6 +37,9 @@ async function handleSubmit(event) {
 }
 $contactForm.addEventListener("submit", handleSubmit);
 
+let headerNav = document.getElementById("header-nav");
+let headerNavAltura = headerNav.offsetHeight;
+
 // MENÚ MOBILE START //
 let menuHambur = document.getElementById("menu-hambur");
 let menumobile = document.getElementById("menu-mobile");
